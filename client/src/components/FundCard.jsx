@@ -1,7 +1,14 @@
 import React from "react";
 
-import { tagType, thirdweb } from "../assets";
+import { tagType, thirdweb, money } from "../assets";
 import { daysLeft } from "../utils";
+
+// const mockData = [
+//   {
+//     imgUrl: '',
+
+//   }
+// ]
 
 const FundCard = ({
   owner,
@@ -13,7 +20,7 @@ const FundCard = ({
   amountCollected,
   handleClick,
 }) => {
-  const remainingDays = daysLeft(deadline);
+  const remainingDays = daysLeft(deadline || 5000);
 
   return (
     <div
@@ -21,7 +28,7 @@ const FundCard = ({
       onClick={handleClick}
     >
       <img
-        src={image}
+        src={image || money}
         alt="fund"
         className="w-full h-[158px] object-cover rounded-[15px]"
       />
@@ -41,26 +48,26 @@ const FundCard = ({
         {/* NOTE truncate = tailwind property to shorten the big title */}
         <div className="block">
           <h3 className="font-epilogue font-semibold text-[16px] text-white text-left leading[26px] truncate">
-            {title}
+            {title || "Raise For Home"}
           </h3>
           <p className="mt-[5px] font-epilogue font-normal text-[12px] text-[#808191] text-left leading-[18px] truncate">
-            {description}
+            {description || "Yo"}
           </p>
         </div>
 
         <div className="flex justify-between flex-wrap mt-[15px] gap-2">
           <div className="flex flex-col">
             <h4 className="font-epilogue font-semibold text-[14px] text-[#b2b3bd]  leading-[18px] ">
-              {amountCollected} ETH
+              {amountCollected || 0.7} ETH
             </h4>
             <p className="mt-[3px] font-epilogue font-normal text-[12px] text-[#808191] leading-[18px] sm:max-w-[120px] truncate">
-              Raised of {target} ETH
+              Raised of {target || 1.7} ETH
             </p>
           </div>
 
           <div className="flex flex-col">
             <h4 className="font-epilogue font-semibold text-[14px] text-[#b2b3bd]  leading-[18px] ">
-              {remainingDays}
+              {remainingDays || "28"}
             </h4>
             <p className="mt-[3px] font-epilogue font-normal text-[12px] text-[#808191] leading-[18px] sm:max-w-[120px] truncate">
               Days left
@@ -77,7 +84,7 @@ const FundCard = ({
             />
           </div>
           <p className="flex-1 font-epilogue font-normal text-[12px] text-[#808191] truncate">
-            by <span className="text-[#b2b3bd]">{owner}</span>
+            by <span className="text-[#b2b3bd]">{owner || "Rohit"}</span>
           </p>
         </div>
       </div>

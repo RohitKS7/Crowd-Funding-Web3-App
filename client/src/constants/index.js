@@ -19,10 +19,10 @@ export const navlinks = [
     link: "/create-campaign",
   },
   {
-    name: "payment",
+    name: "YieldPreview",
     imgUrl: payment,
-    link: "/",
-    disabled: true,
+    link: "/YieldPreview",
+    // disabled: true,
   },
   {
     name: "withdraw",

@@ -122,12 +122,18 @@ const CreateCampaign = () => {
           handleChange={(e) => handleFormFieldChange("image", e)}
         />
 
-        <div className="flex justify-center items-center mt-[40px]">
+        <div className="flex justify-center items-center flex-col mt-[40px]">
           <CustomButton
             btnType="submit"
             title={address ? "Submit new campaign" : "Connect Wallet"}
             styles={address ? "bg-[#1dc071]" : "bg-[#8c6dfd]"}
           />
+          <div className="w-[-webkit-fill-available] flex justify-center items-center mt-4">
+            <p className="font-epilogue font-semibold text-[14px] leading-[30px] text-[#818183] italic">
+              Note- Goerli testnet is down-- app under development. Mock Data
+              Shown!
+            </p>
+          </div>
         </div>
       </form>
     </div>
