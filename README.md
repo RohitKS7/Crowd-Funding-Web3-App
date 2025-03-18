@@ -68,7 +68,9 @@ To run this project locally, follow these steps:
 
 # Relevance to Amana
 
-- This project aligns with Amana’s Web3 frontend needs:Built with React, part of Amana’s stack, and Vite (similar to Next.js for frontend).
+This project aligns with Amana’s Web3 frontend needs:
+
+- Built with React, part of Amana’s stack, and Vite (similar to Next.js for frontend).
 - Focuses on Web3 user interactions (e.g., donations), like Amana’s gasless actions (e.g., “Deposit Gasless”).
 - Shows my experience with DeFi-like apps, directly relevant to Amana’s yield aggregator.
 
