@@ -1,3 +1,4 @@
+# Note: This Repo is under development.
 
 # 💸 Crowd-Funding Web3 App - Vite, React & Thirdweb
 
